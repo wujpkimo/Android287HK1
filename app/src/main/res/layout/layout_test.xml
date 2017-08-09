@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TestView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    app:layout_constraintBottom_toTopOf="@+id/imageView"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.13">
+
+        <ImageView
+            android:id="@+id/image01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="199dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/blacktea" />
+
+        <ImageView
+            android:id="@+id/image02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="191dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/greentea" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:elevation="0dp"
+            android:orientation="horizontal"
+            android:layout_alignParentStart="true">
+
+            <RadioButton
+                android:id="@+id/BlackTeaBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/blackteaicon"
+                android:text="BlackTea"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/GreenTeaBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/BlackTeaBtn"
+                android:layout_alignTop="@+id/BlackTeaBtn"
+                android:layout_toEndOf="@+id/BlackTeaBtn"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/greenteaicon"
+                android:text="GreenTea"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/OrderBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="click"
+        android:text="Order" />
+
+    <TextView
+        android:id="@+id/questext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
